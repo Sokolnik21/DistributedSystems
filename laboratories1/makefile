@@ -1,5 +1,5 @@
 compile:
-	gcc -std=c99 Client.c Scanner.c -o client.out
+	gcc -std=c99 Client.c Scanner.c Token.c -o client.out
 
 run:
-	./client.out 121 255.1.1.0:112312 true TCP
+	./client.out r2d2 127.0.0.1 32 127.0.0.1 42 true TCP

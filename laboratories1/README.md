@@ -4,6 +4,7 @@ Application that allows users to send (broadcast and display) information withou
 ## specification
 Each client is created with 4 arguments:
 - text-based client id
+- port on which listens
 - ip address and port address of the neighbour to whom messages will be send
 - information whether user has token after start
 - choosen protocol { TCP, UDP }
