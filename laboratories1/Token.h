@@ -14,6 +14,12 @@ struct token_t {
   char * message;
 };
 
+token_t create_token(
+  char * source_ip,       char * source_port,
+  char * destination_ip,  char * destination_port,
+  enum message_type message_type,
+  char * message);
+
 char * token_to_string(token_t token);
 token_t string_to_token(char * string);
 

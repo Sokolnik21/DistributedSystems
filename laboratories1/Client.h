@@ -17,4 +17,6 @@ struct client_t {
 int parse_arguments(client_t * client, char ** args);
 void client_clean_up(client_t * client);
 
+char * create_message(char * client_name);
+
 #endif

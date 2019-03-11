@@ -2,6 +2,27 @@
 #include <stdlib.h>
 #include "Token.h"
 
+token_t create_token(
+  char * source_ip,       char * source_port,
+  char * destination_ip,  char * destination_port,
+  enum message_type message_type,
+  char * message) {
+    token_t token;
+    token.source_ip         = malloc(sizeof(char) * (strlen(source_ip) + 1));
+    token.source_port       = malloc(sizeof(char) * (strlen(source_port) + 1));
+    token.destination_ip    = malloc(sizeof(char) * (strlen(destination_ip) + 1));
+    token.destination_port  = malloc(sizeof(char) * (strlen(destination_port) + 1));
+    token.message           = malloc(sizeof(char) * (strlen(message) + 1));
+    strcpy(token.source_ip,         source_ip);
+    strcpy(token.source_port,       source_port);
+    strcpy(token.destination_ip,    destination_ip);
+    strcpy(token.destination_port,  destination_port);
+    token.message_type =            message_type;
+    strcpy(token.message,           message);
+
+    return token;
+  }
+
 /** Also allocates memory - needs to be freed at the end */
 char * token_to_string(token_t token) {
   long int result_length = 0;

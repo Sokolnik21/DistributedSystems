@@ -4,7 +4,7 @@
 #include "Scanner.h"
 
 /**
- * args semantic: [client id] [client ip] [client port] [next client's ip]
+ * args semantic: [client name] [client ip] [client port] [next client's ip]
  *                [next client's port] [does the client has a token at start]
  *                [protocol]
  * args syntax:   (a-z|A-Z|0-9)+ (0-255).(0-255).(0-255).(0-255) \d
