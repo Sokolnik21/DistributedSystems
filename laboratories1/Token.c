@@ -1,27 +1,39 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Token.h"
+// #include "Client.h"
 
 token_t create_token(
-  char * source_ip,       char * source_port,
-  char * destination_ip,  char * destination_port,
-  enum message_type message_type,
-  char * message) {
-    token_t token;
-    token.source_ip         = malloc(sizeof(char) * (strlen(source_ip) + 1));
-    token.source_port       = malloc(sizeof(char) * (strlen(source_port) + 1));
-    token.destination_ip    = malloc(sizeof(char) * (strlen(destination_ip) + 1));
-    token.destination_port  = malloc(sizeof(char) * (strlen(destination_port) + 1));
-    token.message           = malloc(sizeof(char) * (strlen(message) + 1));
-    strcpy(token.source_ip,         source_ip);
-    strcpy(token.source_port,       source_port);
-    strcpy(token.destination_ip,    destination_ip);
-    strcpy(token.destination_port,  destination_port);
-    token.message_type =            message_type;
-    strcpy(token.message,           message);
+    char * source_ip,       char * source_port,
+    char * destination_ip,  char * destination_port,
+    enum message_type message_type,
+    char * message) {
+  token_t token;
+  token.source_ip         = malloc(sizeof(char) * (strlen(source_ip) + 1));
+  token.source_port       = malloc(sizeof(char) * (strlen(source_port) + 1));
+  token.destination_ip    = malloc(sizeof(char) * (strlen(destination_ip) + 1));
+  token.destination_port  = malloc(sizeof(char) * (strlen(destination_port) + 1));
+  token.message           = malloc(sizeof(char) * (strlen(message) + 1));
+  strcpy(token.source_ip,         source_ip);
+  strcpy(token.source_port,       source_port);
+  strcpy(token.destination_ip,    destination_ip);
+  strcpy(token.destination_port,  destination_port);
+  token.message_type =            message_type;
+  strcpy(token.message,           message);
 
-    return token;
-  }
+  return token;
+}
+
+// token_t create_TCP_SEND_token(client_t client) {
+//   char * sendline = create_message(client.client_name);
+//   token_t token = create_token(
+//     client.client_ip,       client.client_port,
+//     client.next_client_ip,  client.next_client_port,
+//     SEND, sendline);
+//   free(sendline);
+//
+//   return token;
+// }
 
 /** Also allocates memory - needs to be freed at the end */
 char * token_to_string(token_t token) {
@@ -73,6 +85,7 @@ token_t string_to_token(char * string) {
   switch(lex_token[0]) {
     case 'A'  : token.message_type = ACK; break;
     case 'S'  : token.message_type = SEND; break;
+    case 'I'  : token.message_type = IDLE; break;
   }
   lex_token = strtok(NULL, "|");
   token.message = malloc(sizeof(char) * (strlen(lex_token) + 1));
@@ -86,6 +99,7 @@ char * message_type_to_char(enum message_type type) {
   switch(type) {
     case SEND : return "S";
     case ACK  : return "A";
+    case IDLE : return "I";
   }
 }
 

@@ -1,8 +1,10 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 
+// #include "Client.h"
+
 /** Later it is possible to add option that corresponds with add new client function */
-enum message_type { SEND, ACK };
+enum message_type { SEND, ACK, IDLE };
 
 typedef struct token_t token_t;
 struct token_t {
