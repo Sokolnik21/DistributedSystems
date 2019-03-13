@@ -1,8 +1,6 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 
-// #include "Client.h"
-
 /** Later it is possible to add option that corresponds with add new client function */
 enum message_type { SEND, ACK, IDLE };
 
@@ -23,7 +21,7 @@ token_t create_token(
   char * message);
 
 char * token_to_string(token_t token);
-token_t string_to_token(char * string);
+token_t string_to_token(const char * const string);
 
 char * message_type_to_char(enum message_type type);
 

@@ -24,9 +24,9 @@ int main(int argc, char ** argv) {
 
   client_t client;
   parse_arguments(&client, argv);
-  enum message_type previous_sent_message = IDLE; // do I need this?
+  // enum message_type previous_sent_message = IDLE; // do I need this?
 
-  token_t token = create_TCP_SEND_token(client);
+  token_t token = create_SEND_token(client);
 
   struct sockaddr_in client_addr =
     create_TCP_socket(client.client_ip, client.client_port);
@@ -62,50 +62,25 @@ int main(int argc, char ** argv) {
     read(prev_client_fd, dataReceived, sizeof(dataReceived) - 1);
 
     token_t received_token = string_to_token(dataReceived);
+    // TEST:
+    // printf("%s\n", dataReceived);
     if(isMessageForClient(received_token, client)) {
       char * sendline;
       switch(received_token.message_type) {
         case SEND:
           printf("%s", received_token.message);
-          sendline = create_message(client.client_name);
-          free(token.source_ip);
-          free(token.source_port);
-          free(token.destination_ip);
-          free(token.destination_port);
-          free(token.message);
-          token.source_ip         = malloc(strlen(received_token.destination_ip) + 1);
-          token.source_port       = malloc(strlen(received_token.destination_port) + 1);
-          token.destination_ip    = malloc(strlen(received_token.source_ip) + 1);
-          token.destination_port  = malloc(strlen(received_token.source_port) + 1);
-          token.message           = malloc(strlen(sendline) + 1);
-
-          strcpy(token.source_ip,         received_token.destination_ip);
-          strcpy(token.source_port,       received_token.destination_port);
-          strcpy(token.destination_ip,    received_token.source_ip);
-          strcpy(token.destination_port,  received_token.source_port);
-          strcpy(token.message, sendline);
-          free(sendline);
-          token.message_type = ACK;
+          token_clean_up(&token);
+          token = create_ACK_token(received_token);
           break;
         case ACK:
           printf("Message delivered\n");
-          token.message_type = IDLE;
+          token_clean_up(&token);
+          token = create_IDLE_token(client);
           break;
         case IDLE:
           printf("Sending message...\n");
-          sendline = create_message(client.client_name);
-          free(token.destination_ip);
-          free(token.destination_port);
-          free(token.message);
-          token.destination_ip    = malloc(strlen(client.next_client_ip) + 1);
-          token.destination_port  = malloc(strlen(client.next_client_port) + 1);
-          token.message           = malloc(strlen(sendline) + 1);
-
-          strcpy(token.destination_ip,    client.next_client_ip);
-          strcpy(token.destination_port,  client.next_client_port);
-          strcpy(token.message, sendline);
-          free(sendline);
-          token.message_type = SEND;
+          token_clean_up(&token);
+          token = create_SEND_token(client);
           break;
         }
     } else {
@@ -121,7 +96,7 @@ int main(int argc, char ** argv) {
   return 0;
 }
 
-token_t create_TCP_SEND_token(client_t client) {
+token_t create_SEND_token(client_t client) {
   char * sendline = create_message(client.client_name);
   token_t token = create_token(
     client.client_ip,       client.client_port,
@@ -132,6 +107,31 @@ token_t create_TCP_SEND_token(client_t client) {
   return token;
 }
 
+/**
+ * token_t arg type does not fit in to the rest create_[] functions
+ * unfortunately I don't see better solution
+ */
+token_t create_ACK_token(token_t received_token) {
+  // Due to some bug it must be at least one char long
+  char * sendline = " ";
+  token_t token = create_token(
+    received_token.destination_ip,  received_token.destination_port,
+    received_token.source_ip,       received_token.source_port,
+    ACK, sendline);
+
+  return token;
+}
+
+token_t create_IDLE_token(client_t client) {
+  // Due to some bug it must be at least one char long
+  char * sendline = " ";
+  token_t token = create_token(
+    client.client_ip,       client.client_port,
+    client.next_client_ip,  client.next_client_port,
+    IDLE, sendline);
+
+  return token;
+}
 
 int parse_arguments(client_t * client, char ** args) {
   client -> client_name       = malloc(sizeof(char) * ( strlen(args[1]) + 1 ));
@@ -159,7 +159,7 @@ char * create_message(char * client_name) {
   strcpy(message, "");
   strcat(message, "Hi! It's ");
   strcat(message, client_name);
-  strcat(message, " \n");
+  strcat(message, "\n");
 
   return message;
 }

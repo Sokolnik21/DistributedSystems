@@ -24,7 +24,10 @@ char * create_message(char * client_name);
 
 struct sockaddr_in create_TCP_socket(char * source_ip, char * source_port);
 
-token_t create_TCP_SEND_token(client_t client);
+token_t create_SEND_token(client_t client);
+token_t create_ACK_token(token_t received_token);
+token_t create_IDLE_token(client_t client);
+
 bool isMessageForClient(token_t token, client_t client);
 
 #endif

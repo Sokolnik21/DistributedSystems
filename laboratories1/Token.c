@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Token.h"
-// #include "Client.h"
+#include "Client.h"
 
 token_t create_token(
     char * source_ip,       char * source_port,
@@ -23,17 +23,6 @@ token_t create_token(
 
   return token;
 }
-
-// token_t create_TCP_SEND_token(client_t client) {
-//   char * sendline = create_message(client.client_name);
-//   token_t token = create_token(
-//     client.client_ip,       client.client_port,
-//     client.next_client_ip,  client.next_client_port,
-//     SEND, sendline);
-//   free(sendline);
-//
-//   return token;
-// }
 
 /** Also allocates memory - needs to be freed at the end */
 char * token_to_string(token_t token) {
@@ -63,7 +52,7 @@ char * token_to_string(token_t token) {
 }
 
 /** ex. string: "127.0.0.1|32|127.0.0.1|42|S|Hello network" */
-token_t string_to_token(char * string) {
+token_t string_to_token(const char * const string) {
   char * string_copy = malloc(strlen(string) + 1);
   strcpy(string_copy, string);
 
