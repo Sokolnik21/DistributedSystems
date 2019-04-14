@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by yFiles for HTML 2.2-->
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-for-html/bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:compat="http://www.yworks.com/xml/yfiles-compat-arrows/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:VuejsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<key id="d0" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
+		<default>true</default>
+	</key>
+	<key id="d1" for="node" attr.type="string" attr.name="url"/>
+	<key id="d2" for="node" attr.type="string" attr.name="description"/>
+	<key id="d3" for="node" attr.name="NodeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"/>
+	<key id="d4" for="node" attr.name="NodeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"/>
+	<key id="d5" for="all" attr.name="UserTags" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/UserTags"/>
+	<key id="d6" for="node" attr.name="NodeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"/>
+	<key id="d7" for="node" attr.name="NodeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"/>
+	<key id="d8" for="edge" attr.type="string" attr.name="url"/>
+	<key id="d9" for="edge" attr.type="string" attr.name="description"/>
+	<key id="d10" for="edge" attr.name="EdgeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"/>
+	<key id="d11" for="edge" attr.name="EdgeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"/>
+	<key id="d12" for="edge" attr.name="EdgeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"/>
+	<key id="d13" for="edge" attr.name="EdgeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"/>
+	<key id="d14" for="port" attr.name="PortLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLabels"/>
+	<key id="d15" for="port" attr.name="PortLocationParameter" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter">
+		<default>
+			<x:Static Member="y:FreeNodePortLocationModel.NodeCenterAnchored"/>
+		</default>
+	</key>
+	<key id="d16" for="port" attr.name="PortStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortStyle">
+		<default>
+			<x:Static Member="y:VoidPortStyle.Instance"/>
+		</default>
+	</key>
+	<key id="d17" for="port" attr.name="PortViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"/>
+	<key id="d18" attr.name="SharedData" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/SharedData"/>
+	<data key="d18">
+		<y:SharedData>
+			<yjs:Font x:Key="1" fontSize="12" fontFamily="'Arial'"/>
+			<yjs:DefaultLabelStyle x:Key="2" font="{y:GraphMLReference 1}" textFill="BLACK"/>
+			<y:RatioAnchoredLabelModelParameter x:Key="3" LayoutOffset="40.75,9">
+				<y:RatioAnchoredLabelModelParameter.Model>
+					<y:FreeNodeLabelModel/>
+				</y:RatioAnchoredLabelModelParameter.Model>
+			</y:RatioAnchoredLabelModelParameter>
+			<yjs:Stroke x:Key="4" fill="#FF00FFF0"/>
+			<yjs:SolidColorFill x:Key="5" color="#FF00FFF0"/>
+			<y:RatioAnchoredLabelModelParameter x:Key="6" LayoutOffset="34.25,9">
+				<y:RatioAnchoredLabelModelParameter.Model>
+					<y:FreeNodeLabelModel/>
+				</y:RatioAnchoredLabelModelParameter.Model>
+			</y:RatioAnchoredLabelModelParameter>
+			<yjs:Stroke x:Key="7" fill="#FF008CFF"/>
+			<yjs:SolidColorFill x:Key="8" color="#FF008CFF"/>
+			<y:RatioAnchoredLabelModelParameter x:Key="9" LayoutOffset="31.25,9">
+				<y:RatioAnchoredLabelModelParameter.Model>
+					<y:FreeNodeLabelModel/>
+				</y:RatioAnchoredLabelModelParameter.Model>
+			</y:RatioAnchoredLabelModelParameter>
+			<yjs:SolidColorFill x:Key="10" color="#05FFFFFF"/>
+			<yjs:Stroke x:Key="11" fill="#05FFFFFF"/>
+			<yjs:SolidColorFill x:Key="12" color="DarkOrange"/>
+			<yjs:Stroke x:Key="13" fill="#FF1400FF"/>
+			<yjs:SolidColorFill x:Key="14" color="#FF1400FF"/>
+			<yjs:Stroke x:Key="15" fill="#4DFF0000"/>
+			<yjs:SolidColorFill x:Key="16" color="#4DFF0000"/>
+			<y:FreeNodeLabelModel x:Key="17"/>
+			<yjs:Font x:Key="18" fontSize="12" fontFamily="'Arial'"/>
+			<y:SmartEdgeLabelModel x:Key="19"/>
+			<yjs:Stroke x:Key="20" fill="BLACK" thickness="0.75"/>
+			<yjs:Arrow x:Key="21" type="TRIANGLE" stroke="BLACK" fill="BLACK" cropLength="1"/>
+			<yjs:PolylineEdgeStyle x:Key="22" stroke="{y:GraphMLReference 20}" targetArrow="{y:GraphMLReference 21}"/>
+			<y:SmartEdgeLabelModelParameter x:Key="23" Model="{y:GraphMLReference 19}" Distance="5"/>
+			<yjs:PolylineEdgeStyle x:Key="24" stroke="{y:GraphMLReference 20}" targetArrow="{y:GraphMLReference 21}"/>
+		</y:SharedData>
+	</data>
+	<graph id="G" edgedefault="directed">
+		<node id="n0">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 9}">
+						<y:Label.Text>Exchange</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="{y:GraphMLReference 10}" backgroundStroke="{y:GraphMLReference 11}" font="{y:GraphMLReference 1}" textFill="{y:GraphMLReference 12}"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-274" Y="-794" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 13}" fill="{y:GraphMLReference 14}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d15">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5255319148936171,0.59375"/>
+				</data>
+			</port>
+			<port name="p2"/>
+			<port name="p3"/>
+			<port name="p4"/>
+			<port name="p5"/>
+			<port name="p6"/>
+			<port name="p7"/>
+			<port name="p8"/>
+			<port name="p9"/>
+			<port name="p10"/>
+		</node>
+		<node id="n1">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 3}" Style="{y:GraphMLReference 2}">
+						<y:Label.Text>Doctor1</y:Label.Text>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-509" Y="-850.2794117647061" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 4}" fill="{y:GraphMLReference 5}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0">
+				<data key="d15">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5255319148936171,0.59375"/>
+				</data>
+			</port>
+			<port name="p1"/>
+		</node>
+		<node id="n2">
+			<data key="d3">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>queueT_1</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="9,1.1617647058822058">
+								<y:RatioAnchoredLabelModelParameter.Model>
+									<y:FreeNodeLabelModel/>
+								</y:RatioAnchoredLabelModelParameter.Model>
+							</y:RatioAnchoredLabelModelParameter>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-53.75" Y="-850.2794117647061" Width="74" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="#FFFF0000" fill="#FFFF0000"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n3">
+			<data key="d3">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>queueT_2</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="9,1.1617647058824332">
+								<y:RatioAnchoredLabelModelParameter.Model>
+									<y:FreeNodeLabelModel/>
+								</y:RatioAnchoredLabelModelParameter.Model>
+							</y:RatioAnchoredLabelModelParameter>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-53.75" Y="-786.1617647058824" Width="74" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="#FFFF0000" fill="#FFFF0000"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n4">
+			<data key="d3">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>queueT_3</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="9,1.1617647058822058">
+								<y:RatioAnchoredLabelModelParameter.Model>
+									<y:FreeNodeLabelModel/>
+								</y:RatioAnchoredLabelModelParameter.Model>
+							</y:RatioAnchoredLabelModelParameter>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-53.75" Y="-722.0441176470588" Width="74" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="#FFFF0000" fill="#FFFF0000"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n5">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 3}">
+						<y:Label.Text>Doctor2</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-509" Y="-737.7205882352941" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 4}" fill="{y:GraphMLReference 5}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n6">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 6}" Style="{y:GraphMLReference 2}">
+						<y:Label.Text>Technic1</y:Label.Text>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="57.75" Y="-841.5" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n7">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 6}">
+						<y:Label.Text>Technic2</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="57.75" Y="-737.7205882352941" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n8">
+			<data key="d3">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>Administrator</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="22.75,9">
+								<y:RatioAnchoredLabelModelParameter.Model>
+									<y:FreeNodeLabelModel/>
+								</y:RatioAnchoredLabelModelParameter.Model>
+							</y:RatioAnchoredLabelModelParameter>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="#00543535" backgroundStroke="#00543535" font="{y:GraphMLReference 1}" textFill="#FFCACACA"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-274" Y="-896.5" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="#C9000000" fill="#C9000000" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n9">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 9}">
+						<y:Label.Text>Exchange</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="{y:GraphMLReference 10}" backgroundStroke="{y:GraphMLReference 11}" font="{y:GraphMLReference 1}" textFill="{y:GraphMLReference 12}"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-819" Y="-794" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 13}" fill="{y:GraphMLReference 14}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n10">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 9}">
+						<y:Label.Text>Exchange</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="{y:GraphMLReference 10}" backgroundStroke="{y:GraphMLReference 11}" font="{y:GraphMLReference 1}" textFill="{y:GraphMLReference 12}"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="259" Y="-794" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 13}" fill="{y:GraphMLReference 14}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n11">
+			<data key="d3">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>queueD_1</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="8,1.1617647058823195">
+								<y:RatioAnchoredLabelModelParameter.Model>
+									<y:FreeNodeLabelModel/>
+								</y:RatioAnchoredLabelModelParameter.Model>
+							</y:RatioAnchoredLabelModelParameter>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-617.375" Y="-842.4411764705884" Width="74" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="#42FF0000" fill="#42FF0000"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n12">
+			<data key="d3">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>queueD_2</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="8,1.1617647058823195">
+								<y:RatioAnchoredLabelModelParameter.Model>
+									<y:FreeNodeLabelModel/>
+								</y:RatioAnchoredLabelModelParameter.Model>
+							</y:RatioAnchoredLabelModelParameter>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-617.375" Y="-729.8823529411767" Width="74" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 15}" fill="{y:GraphMLReference 16}"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n13">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 3}">
+						<y:Label.Text>Doctor1</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-485.25" Y="-560.1617647058822" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 4}" fill="{y:GraphMLReference 5}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n14">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 3}">
+						<y:Label.Text>Doctor2</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-339.5" Y="-568.7205882352941" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 4}" fill="{y:GraphMLReference 5}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n15">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 6}">
+						<y:Label.Text>Technic1</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-193.75" Y="-568.7205882352941" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n16">
+			<data key="d3">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 6}">
+						<y:Label.Text>Technic2</y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-48" Y="-568.7205882352941" Width="117.5" Height="32"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}" shape="ELLIPSE"/>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n17">
+			<data key="d3">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>queueInfo_D1</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="6.375,1.1617647058823195" Model="{y:GraphMLReference 17}"/>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 18}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-326.125" Y="-617.3235294117643" Width="90.75" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 15}" fill="{y:GraphMLReference 16}"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n18">
+			<data key="d3">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>queueInfo_D2</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="6.375,1.1617647058823195" Model="{y:GraphMLReference 17}"/>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 18}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-471.875" Y="-617.3235294117643" Width="90.75" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 15}" fill="{y:GraphMLReference 16}"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n19">
+			<data key="d3">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>queueInfo_T1</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="7.375,1.1617647058823195" Model="{y:GraphMLReference 17}"/>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 18}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-180.375" Y="-617.3235294117645" Width="90.75" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 15}" fill="{y:GraphMLReference 16}"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n20">
+			<data key="d3">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>queueInfo_T2</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:RatioAnchoredLabelModelParameter LayoutOffset="7.375,1.1617647058823195" Model="{y:GraphMLReference 17}"/>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 18}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d4">
+				<y:RectD X="-34.625" Y="-617.3235294117645" Width="90.75" Height="16.32352941176464"/>
+			</data>
+			<data key="d6">
+				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 15}" fill="{y:GraphMLReference 16}"/>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<edge id="e0" source="n5" target="n0" sourceport="p0" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>doctor2.examination.*</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" Location="FromTarget" SegmentRatio="-1.0000000005838672e-7" Distance="-0.001"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 20}" targetArrow="{y:GraphMLReference 21}"/>
+			</data>
+		</edge>
+		<edge id="e1" source="n1" target="n0" sourceport="p0" targetport="p1">
+			<data key="d10">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>doctor1.examination.*</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" Location="FromTarget" SegmentRatio="-1.0000000005838672e-7" Distance="-0.001"/>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle font="{y:GraphMLReference 1}" textFill="BLACK"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 20}" targetArrow="{y:GraphMLReference 21}"/>
+			</data>
+		</edge>
+		<edge id="e2" source="n0" target="n2" sourceport="p2" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>*.examination.elbow</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="-1e-7" Distance="-5.000000000000005"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e3" source="n0" target="n3" sourceport="p3" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>*.examination.hip</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="-1e-7" Distance="-0.9999999999998863"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e4" source="n0" target="n4" sourceport="p4" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>*.examination.knee</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="1" Distance="-0.001"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e5" source="n2" target="n6" sourceport="p1" targetport="p0">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e6" source="n3" target="n6" sourceport="p1" targetport="p1">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e7" source="n3" target="n7" sourceport="p2" targetport="p0">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e8" source="n4" target="n7" sourceport="p1" targetport="p1">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e9" source="n0" target="n8" sourceport="p5" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>*.*.*</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentIndex="1" SegmentRatio="0.500000000000002" Distance="0.001"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d11">
+				<x:List>
+					<y:Bend Location="-260.25,-804.2307692307693"/>
+					<y:Bend Location="-260.25,-861.2458255485162"/>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e10" source="n8" target="n0" sourceport="p1" targetport="p6">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>info.*</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentIndex="1" Distance="5"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d11">
+				<x:List>
+					<y:Bend Location="-171.125,-860"/>
+					<y:Bend Location="-171.125,-804.75"/>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e11" source="n9" target="n11" sourceport="p0" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>*.result.doctor1</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="-1e-7" Distance="-0.0010000000000038867"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e12" source="n9" target="n12" sourceport="p1" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>*.result.doctor2</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="-1e-7" Distance="-4.999999999999954"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e13" source="n6" target="n10" sourceport="p2" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>technic1.result.*</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="0.49999999999999933" Distance="-0.001"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e14" source="n7" target="n10" sourceport="p2" targetport="p1">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>technic2.result.*</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" Distance="-0.0010000000001184617"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e15" source="n11" target="n1" sourceport="p1" targetport="p1">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e16" source="n12" target="n5" sourceport="p1" targetport="p1">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e17" source="n0" target="n18" sourceport="p7" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 23}" Style="{y:GraphMLReference 2}">
+						<y:Label.Text>info.doctor1</y:Label.Text>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e18" source="n0" target="n17" sourceport="p8" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 23}" Style="{y:GraphMLReference 2}">
+						<y:Label.Text>info.doctor2</y:Label.Text>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e19" source="n0" target="n19" sourceport="p9" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>info.technic1</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="0.4999999999999961" Distance="-0.001000000000035861"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e20" source="n0" target="n20" sourceport="p10" targetport="p0">
+			<data key="d10">
+				<x:List>
+					<y:Label Style="{y:GraphMLReference 2}">
+						<y:Label.Text>info.technic2</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 19}" SegmentRatio="0.49999999999999795" Distance="-0.001"/>
+						</y:Label.LayoutParameter>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="22"/>
+			</data>
+		</edge>
+		<edge id="e21" source="n20" target="n16" sourceport="p1" targetport="p0">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="24"/>
+			</data>
+		</edge>
+		<edge id="e22" source="n18" target="n13" sourceport="p1" targetport="p0">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="24"/>
+			</data>
+		</edge>
+		<edge id="e23" source="n17" target="n14" sourceport="p1" targetport="p0">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="24"/>
+			</data>
+		</edge>
+		<edge id="e24" source="n19" target="n15" sourceport="p1" targetport="p0">
+			<data key="d12">
+				<y:GraphMLReference ResourceKey="24"/>
+			</data>
+		</edge>
+	</graph>
+</graphml>
