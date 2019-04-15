@@ -30,13 +30,6 @@ public class Technician {
         String EXCHANGE_NAME = "Exchange";
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.TOPIC);
 
-        // queue & bind
-//        String queueName = channel.queueDeclare(t.getSpec1(), true, false, false, null).getQueue();
-        String queueName = channel.queueDeclare().getQueue();
-        channel.queueBind(queueName, EXCHANGE_NAME, "*.examination." + t.getSpec1());
-        channel.queueBind(queueName, EXCHANGE_NAME, "*.examination." + t.getSpec2());
-        System.out.println("created queue: " + queueName);
-
         // consumer (message handling)
         Consumer consumer = new DefaultConsumer(channel) {
             @Override
@@ -60,8 +53,18 @@ public class Technician {
             }
         };
 
+        // queue & bind
+        String queueName = channel.queueDeclare(t.getSpec1(), true, false, false, null).getQueue();
+        channel.queueBind(queueName, EXCHANGE_NAME, "*.examination." + t.getSpec1());
+        channel.basicConsume(queueName, false, consumer);
+        System.out.println("created queue: " + queueName);
+
+        queueName = channel.queueDeclare(t.getSpec2(), true, false, false, null).getQueue();
+        channel.queueBind(queueName, EXCHANGE_NAME, "*.examination." + t.getSpec2());
+        channel.basicConsume(queueName, false, consumer);
+        System.out.println("created queue: " + queueName);
+
         // start listening
         System.out.println("Waiting for messages...");
-        channel.basicConsume(queueName, false, consumer);
     }
 }
