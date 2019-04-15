@@ -64,6 +64,20 @@ public class Technician {
         channel.basicConsume(queueName, false, consumer);
         System.out.println("created queue: " + queueName);
 
+        queueName = channel.queueDeclare(t.getName(), true, false, false, null).getQueue();
+        channel.queueBind(queueName, EXCHANGE_NAME, "info." + t.getName());
+        System.out.println(t.getName());
+        channel.basicConsume(queueName, false, new DefaultConsumer(channel) {
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                String message = new String(body, "UTF-8");
+                System.out.println("Received ADMIN message: " + message);
+
+                channel.basicAck(envelope.getDeliveryTag(), false);
+            }
+        });
+        System.out.println("created queue: " + queueName);
+
         // start listening
         System.out.println("Waiting for messages...");
     }

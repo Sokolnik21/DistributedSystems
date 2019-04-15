@@ -30,6 +30,7 @@ public class Doctor {
         channel.queueBind(queueName, EXCHANGE_NAME, "*.result." + d.getName());
         System.out.println("created queue: " + queueName);
 
+        String finalQueueName = queueName;
         new Thread(new Runnable() {
             public void run()
             {
@@ -47,11 +48,25 @@ public class Doctor {
                 // start listening
                 System.out.println("Waiting for messages...");
                 try {
-                    channel.basicConsume(queueName, false, consumer);
+                    channel.basicConsume(finalQueueName, false, consumer);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }}).start();
+
+        queueName = channel.queueDeclare(d.getName(), true, false, false, null).getQueue();
+        channel.queueBind(queueName, EXCHANGE_NAME, "info." + d.getName());
+        System.out.println(d.getName());
+        channel.basicConsume(queueName, false, new DefaultConsumer(channel) {
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                String message = new String(body, "UTF-8");
+                System.out.println("Received ADMIN message: " + message);
+
+                channel.basicAck(envelope.getDeliveryTag(), false);
+            }
+        });
+        System.out.println("created queue: " + queueName);
 
         while (true) {
 
