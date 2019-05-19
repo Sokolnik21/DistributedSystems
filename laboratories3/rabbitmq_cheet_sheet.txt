@@ -1,0 +1,12 @@
+at the beginning: "sudo"
+
+systemctl enable rabbitmq-server
+
+systemctl start rabbitmq-server
+systemctl status rabbitmq-server
+systemctl stop rabbitmq-server
+
+rabbitmq-plugins enable rabbitmq_management
+rabbitmqctl add_user [name] [password]
+rabbitmqctl set_user_tags admin administrator
+rabbitmqctl set_permission -p / admin ".*" ".*" ".*"
